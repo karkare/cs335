@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="author" content="Amey Karkare" />
+    <meta name="keywords" content="CS335, CS 335, Compiler, Design" />
+    <link rel="stylesheet" href="mystyle.css" type="text/css" />
+    <title> CS 335: Compiler Design</title>
+  </head>
+  <body>
+    
+<h1 id="cs335-compiler-design-2018-19-iind-semester">CS335 Compiler Design (2018-19 IInd Semester)<a id="top"/></h1>
+<hr />
+<ul>
+<li><strong>Instructor</strong>: <a href="http://www.cse.iitk.ac.in/users/karkare">Amey Karkare</a> (<script type="text/javascript">
+<!--
+h='&#x63;&#x73;&#x65;&#46;&#x69;&#x69;&#116;&#x6b;&#46;&#x61;&#x63;&#46;&#x69;&#110;';a='&#64;';n='&#x6b;&#x61;&#114;&#x6b;&#x61;&#114;&#x65;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x6b;&#x61;&#114;&#x6b;&#x61;&#114;&#x65;&#32;&#x61;&#116;&#32;&#x63;&#x73;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x69;&#x69;&#116;&#x6b;&#32;&#100;&#x6f;&#116;&#32;&#x61;&#x63;&#32;&#100;&#x6f;&#116;&#32;&#x69;&#110;</noscript>, <script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x6b;&#x61;&#114;&#x6b;&#x61;&#114;&#x65;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x6b;&#x61;&#114;&#x6b;&#x61;&#114;&#x65;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>)</li>
+<!--li><p><strong>TAs</strong>: <a href="nishitm@cse.iitk.ac">Nishit Majithia</a>, <a href="kapildd@cse.iitk.ac.in">Kapil Digambar Dolas</a>, <a href="nimisha@cse.iitk.ac.in">Nimisha Agarwal</a>, <a href="ritigarg@cse.iitk.ac.in">Ritika Garg</a>, <a href="somyac@cse.iitk.ac.in">Somya Chaturvedi</a>, <a href="goutham@cse.iitk.ac.in">Phani Raj Goutham Kotcharlakota</a>, <a href="subhadip@cse.iitk.ac.in">Subhadip Nandi</a></p></li-->
+<li><strong>Timings</strong>: Mon, Wed, Fri : 9:00AM - 10:00AM</li>
+<li><p><strong>Venue</strong>: RM 101 (Rajeev Motvani Building, CSE Dept)</p></li>
+</ul>
+<hr />
+<p>This course aims to teach various phases of Compiler Design.</p>
+<ul>
+<li><a href="#code-of-ethics">Code of Ethics</a></li>
+<li><a href="#announcements">Announcements</a></li>
+<li><a href="#course-outline">Course Outline</a></li>
+<li><a href="#evaluation-scheme">Evaluation Scheme</a></li>
+<li><a href="#topics-covered-and-handouts">Topics covered and handouts</a></li>
+<li><a href="#assignments">Assignments</a></li>
+<li><a href="#course-project">Course Project</a></li>
+<li><a href="#supporting-material">Supporting Material</a></li>
+<li><a href="#recommended-references">Recommended References</a></li>
+</ul>
+<hr />
+<h2 id="code-of-ethics">Code of Ethics</h2>
+<p>Any report/program/assignment you submit must <strong>clearly distinguish</strong> your contribution from others (webpages, softwares, report, discussions with other students). <strong class="warn">The penalty for copying in any form will be severe</strong>.</p>
+<hr />
+<h2 id="announcements">Announcements</h2>
+<ul>
+<li><p><strong class="warn">Important</strong>: All emails either to the instructor or the TAs should begin with subject line &quot;<strong>[CS335]</strong>&quot; -- without any spaces in the course code (and without quotes). Email not complying to this rule <strong>will NOT be entertained</strong>.</p></li>
+<li><p>On 08 Apr 2017, Project Milestone 4 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="project/Milestone4.txt">Local Copy</a></p></li>
+<li><p>On 04th Apr 2017, Assignment 3 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="assignments/asgn3/a3.pdf">Local Copy</a></p></li>
+<li><p>On 20th Mar 2017, Project Milestone 3 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="project/Milestone3.txt">Local Copy</a></p></li>
+<li><p>On 24th Feb 2017, Assignment 2 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="assignments/asgn2/Assignment.html">Local Copy</a></p></li>
+<li><p>On 10th Feb 2017, Project Milestone 2 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="project/Milestone2.txt">Local Copy</a></p></li>
+<li><p><a href="assignments/asgnP1/Assignment.html">Lex and Yacc Tutorial</a></p></li>
+<li><p>Section List for Enrolled Students: <a href="CS335_Compiler_Design_Section.pdf">PDF</a></p></li>
+<li><strong class="warn"> Local copy of Assignment 1 and Project Milestone 1 added below. </strong></li>
+<li><p>On 23rd Jan 2017, details of Project Milestone 1 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="project/Milestone1.txt">Local Copy</a></p></li>
+<li><p>On 16th Jan 2017, Assignment 1 uploaded on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. <a href="assignments/asgn1/Assignment.html">Local Copy</a></p></li>
+<li><p>The course site is up on <a href="https://canvas.cse.iitk.ac.in/courses/21">Canvas</a>. Everyone in the class must register on Canvas.</p></li>
+</ul>
+<hr />
+<h2 id="topics-covered-and-slides">Topics Covered and Slides</h2>
+<p>The slides are not suitable for taking prints as there is a lot of redundancy due to overlays. Print only the pages that you really require.</p>
+<p>Note that [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>] refers to <strong>Compilers: Principles, Techniques, and Tools, Second edition, 2006. by Alfred V. Aho , Monica S. Lam , Ravi Sethi , Jeffrey D. Ullman.</strong> Almost all the content we cover in the class is also available in the older edition of the book [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>], but the chapters/sections could be different.</p>
+<table style="width:92%;">
+<colgroup>
+<col width="6%" />
+<col width="50%" />
+<col width="15%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">#</th>
+<th align="left">Description (# of Lectures)</th>
+<th align="left">Slides</th>
+<th align="left">References</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1.</td>
+<td align="left">Introduction (1)</td>
+<td align="left">[<a href="lectures/01Introduction.pdf">slides</a>]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="right">2.</td>
+<td align="left">Linking (2)</td>
+<td align="left">[<a href="lectures/02MultiFileLinkingC.pdf">slides</a>]</td>
+<td align="left">[<a href="https://www.cs.cmu.edu/afs/cs/academic/class/15213-f10/www/lectures/11-linking.pdf">Slides</a>] and [<a href="http://www.groupes.polymtl.ca/inf2610/documentation/ComputerSystemBook.pdf">Chapter 7 of the book</a>] by Bryant &amp; O'Hallaron</td>
+</tr>
+<tr class="odd">
+<td align="right">3.</td>
+<td align="left">Overview of Compilation (2)</td>
+<td align="left">[<a href="lectures/03OverviewOfCompilers.pdf">slides</a>]</td>
+<td align="left">Chapter 1 and 2 of the [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">4.</td>
+<td align="left">Lexical Analysis (2)</td>
+<td align="left">[<a href="lectures/04LexicalAanalysis.pdf">slides</a>]</td>
+<td align="left">Chapter 3 of the [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">5.</td>
+<td align="left">Syntax Analysis (1.5)</td>
+<td align="left">[<a href="lectures/05SyntaxAnalysis.pdf">slides</a>]</td>
+<td align="left">Chapter 4 (4.1 - 4.3) of the [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">R.</td>
+<td align="left">Top Down Parsing (Self Study)</td>
+<td align="left">[<a href="lectures/06TopDownParsing.pdf">slides</a>]</td>
+<td align="left">Chapter 4 (4.4) of the [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">6.</td>
+<td align="left">Bottom Up Parsing (4.5)</td>
+<td align="left">[<a href="lectures/07BottomUpParsing.pdf">slides</a>]</td>
+<td align="left">Chapter 4 (4.5 - 4.9) of the [<a href="http://xahlee.info/parser/dragon_book_table_of_contents.html">DragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">7.</td>
+<td align="left">Semantic Analysis (1.5)</td>
+<td align="left">[<a href="lectures/10SemanticAnalysis.pdf">slides</a>]</td>
+<td align="left">Chapter 5 (5.1) of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">8.</td>
+<td align="left">Syntax Directed Translation (3.5)</td>
+<td align="left">[<a href="lectures/11AST_AttributeEval.pdf">slides</a>]</td>
+<td align="left">Chapter 5 (5.2 - 5.6, 5.8) of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">9.</td>
+<td align="left">Type Checking (2)</td>
+<td align="left">[<a href="lectures/12TypeSystem.pdf">slides</a>]</td>
+<td align="left">Chapter 6 (6.1 - 6.6) of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">10.</td>
+<td align="left">Run-time Systems (6)</td>
+<td align="left">[<a href="lectures/13RuntimeSystems.pdf">slides</a>]</td>
+<td align="left">Chapter 7 (7.1 - 7.5) of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">11.</td>
+<td align="left">IR and Symbol Table (2)</td>
+<td align="left">[<a href="lectures/15IR_and_SymTab.pdf">slides</a>]</td>
+<td align="left">Sections 7.6 &amp; 8.1 of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">12.</td>
+<td align="left">Intermediate Code Generation (4)</td>
+<td align="left">[<a href="lectures/16IRGeneration.pdf">slides</a>]</td>
+<td align="left">Chapter 8 of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">13.</td>
+<td align="left">Code Generation (1.5)</td>
+<td align="left">[<a href="lectures/18CodeGen.pdf">slides</a>]</td>
+<td align="left">Chapter 9 of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="odd">
+<td align="right">14.</td>
+<td align="left">Code Gen: Sethi Ullman (1.5)</td>
+<td align="left">[<a href="lectures/19SethiUllman.pdf">slides</a>]</td>
+<td align="left">Section 9.10 of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+<tr class="even">
+<td align="right">15.</td>
+<td align="left">Code Gen: Aho Johnson (3)</td>
+<td align="left">[<a href="lectures/20AhoJohnson.pdf">slides</a>]</td>
+<td align="left">Section 9.10 of the [<a href="https://www.amazon.com/Compilers-Principles-Techniques-Alfred-Aho/dp/0201100886/">OldDragonBook</a>]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assignments">Assignments</h2>
+<p>There will be short assignments to give you a chance to apply the lecture material. Assignments will have some written and some programming tasks.</p>
+<hr />
+<h2 id="course-project">Course Project</h2>
+<p>The course project gives you a chance to apply the concepts learnt in the class to build a prototype compiler. You will be required to <strong>implement</strong> various phases of a compiler, and perform an <strong>experimental evaluation</strong> of your implementation.</p>
+<ul>
+<li>Project can be done individually or in a group of two.</li>
+</ul>
+<p><strong class="warn">Important:</strong> Use of git version control system on <strong><a href="http://bitbucket.org">bitbucket</a></strong> is <strong>required</strong> for the project.</p>
+<hr />
+<h2 id="course-outline">Course Outline</h2>
+<p>The course will mainly cover topics from the following list (not necessarily in the same order).</p>
+<ul>
+<li><strong>Compiler structure</strong>: analysis-synthesis model of compilation, various phases of a compiler, tool based approach to compiler construction.</li>
+<li><strong>Lexical analysis</strong>: interface with input, parser and symbol table, token, lexeme and patterns. Difficulties in lexical analysis. Error reporting. Implementation. Regular definition, Transition diagrams, LEX.</li>
+<li><strong>Syntax analysis</strong>: CFGs, ambiguity, associativity, precedence, top down parsing, recursive descent parsing, transformation on the grammars, predictive parsing, bottom up parsing, operator precedence grammars, LR parsers (SLR, LALR, LR), YACC.</li>
+<li><strong>Syntax directed definitions</strong>: inherited and synthesized attributes, dependency graph, evaluation order, bottom up and top down evaluation of attributes, L- and S-attributed definitions.</li>
+<li><strong>Type checking</strong>: type system, type expressions, structural and name equivalence of types, type conversion, overloaded functions and operators, polymorphic functions.</li>
+<li><strong>Run time system</strong>: storage organization, activation tree, activation record, parameter passing, symbol table, dynamic storage allocation.</li>
+<li><strong>Intermediate code generation</strong>: intermediate representations, translation of declarations, assignments, control flow, boolean expressions and procedure calls. Implementation issues.</li>
+<li><strong>Code generation and instruction selection</strong>: issues, basic blocks and flow graphs, register allocation, code generation, dag representation of programs, code generation from dags, peep hole optimization, code generator generators, specifications of machine.</li>
+</ul>
+<hr />
+<h3 id="evaluation-scheme">Evaluation Scheme</h3>
+<p><strong>(Tentative)</strong></p>
+<table style="width:54%;">
+<colgroup>
+<col width="40%" />
+<col width="13%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">Assignments/Quizzes</td>
+<td align="left">10%</td>
+</tr>
+<tr class="even">
+<td align="left">Mid semester exam</td>
+<td align="left">20%</td>
+</tr>
+<tr class="odd">
+<td align="left">End semester exam</td>
+<td align="left">35%</td>
+</tr>
+<tr class="even">
+<td align="left">Course Project</td>
+<td align="left">35%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="supporting-material">Supporting Material</h2>
+<h5 id="most-of-the-following-softwares-are-available-from-package-repositories-of-linux-distributions.-it-is-recommended-to-use-these-repositories-and-install-instead-of-building-them-from-source.">Most of the following softwares are available from package repositories of linux distributions. It is recommended to use these repositories and install instead of building them from source.</h5>
+<ul>
+<li><a href="http://cscope.sourceforge.net">cscope</a> and <a href="http://ctags.sourceforge.net">ctags</a>: Code browsing utilities</li>
+<li><a href="http://www.eclipse.org">Eclipse</a>: A Java based Integrated Development Environment</li>
+<li><a href="http://www.latex-project.org">LaTeX</a>: A document preparation system</li>
+</ul>
+<h2 id="recommended-references">Recommended References</h2>
+<ul>
+<li>Aho, A., Lam, M., Sethi, R., Ullman, J., <strong>Compilers: Principles, Techniques, &amp; Tools</strong>, Addison Wesley, 2007.</li>
+<li>Appel, A., <strong>Modern Compiler Implementation in Java</strong> (or ML, or C), Cambridge University Press, 2002.</li>
+<li>Cooper, K., Torczon, L., <strong>Engineering a Compiler</strong>, Morgan Kaufmann, 2004</li>
+<li>Muchnick, S., <strong>Advanced Compiler Design and Implementation</strong>, Morgan Kaufmann, 1997.</li>
+<li>Randy Allen, Ken Kennedy,<strong>Optimizing Compilers for Modern Architectures: A Dependence-based Approach</strong>, Morgan Kaufmann, 2001</li>
+</ul>
+<hr />
+<h3 id="take-me-to-the-top">Take me to the <a href="#top">Top</a></h3>
+<h6 id="powered-by-pandoc">powered by <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a></h6>
+<p>Last Modified at : Wed May 17 10:57:36 IST 2017</p>
+</body>
+</html>
