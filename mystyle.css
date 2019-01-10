@@ -88,6 +88,8 @@ th {
         background-color: lightgray;
 }
 
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 strong {
     color: #000000;
     font-weight: bold;
