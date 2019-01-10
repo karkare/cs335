@@ -85,10 +85,10 @@ td {
 
 th {
     	font-family: lucida grande, Verdana, Arial, Tahoma, Helvetica;
-        background-color: lightgray;
+        background-color: #c2e2d2;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {background-color: lightgray;}
 
 strong {
     color: #000000;
